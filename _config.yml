@@ -78,4 +78,6 @@ theme: black-blue
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repository: https://github.com/merelydust/merelydust.github.io
+  branch: master
