@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="尘埃的博客">
 <meta property="og:description" content="探究-webkit-overflow-scrolling： -webkit-overflow-scrolling:touch的bug ios微信公众号对话页内容消失|闪屏|连带拖动">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-06T09:20:12.640Z">
+<meta property="og:updated_time" content="2019-08-06T09:34:03.054Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="探究-webkit-overflow-scrolling">
 <meta name="twitter:description" content="探究-webkit-overflow-scrolling： -webkit-overflow-scrolling:touch的bug ios微信公众号对话页内容消失|闪屏|连带拖动">
@@ -301,8 +301,7 @@
 
 <h2 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h2><p>ios设备上，微信公众号菜单跳转对话页，往下拖动页面内容会短暂消失，拖住不动页面会“闪”回顶端，拖动过程偶发底部输入框被连带着一起拖动。</p>
 <h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>看了下同事之前写的代码，发现了一句-webkit-overflow-scrolling:touch，感觉是这个原因，开始面向谷歌编程。</p>
-<pre><code>### bug点以及对应策略收集:
-</code></pre><ul>
+<h3 id="bug点以及对应策略收集"><a href="#bug点以及对应策略收集" class="headerlink" title="bug点以及对应策略收集:"></a>bug点以及对应策略收集:</h3><ul>
 <li><p>兼容写法：前面加一句 <code>overflow: auto</code></p>
 </li>
 <li><p>如果添加了此属性但是不起作用，再添加overflow-y: scroll</p>
@@ -355,7 +354,7 @@
         <p><span>本文标题:</span><a href="/2019/08/06/探究-webkit-overflow-scrolling/">探究-webkit-overflow-scrolling</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 merelydust 的个人博客">merelydust</a></p>
         <p><span>发布时间:</span>2019年08月06日 - 15时19分</p>
-        <p><span>最后更新:</span>2019年08月06日 - 17时20分</p>
+        <p><span>最后更新:</span>2019年08月06日 - 17时34分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/08/06/探究-webkit-overflow-scrolling/" title="探究-webkit-overflow-scrolling">http://merelydust.github.io/2019/08/06/探究-webkit-overflow-scrolling/</a>
             <span class="copy-path" data-clipboard-text="原文: http://merelydust.github.io/2019/08/06/探究-webkit-overflow-scrolling/　　作者: merelydust" title=""></span>
@@ -383,7 +382,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题描述："><span class="toc-number">1.</span> <span class="toc-text">问题描述：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决过程"><span class="toc-number">2.</span> <span class="toc-text">解决过程</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#问题描述："><span class="toc-number">1.</span> <span class="toc-text">问题描述：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决过程"><span class="toc-number">2.</span> <span class="toc-text">解决过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#bug点以及对应策略收集"><span class="toc-number">2.1.</span> <span class="toc-text">bug点以及对应策略收集:</span></a></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
